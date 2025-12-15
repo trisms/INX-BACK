@@ -1,0 +1,19 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "bootstrap/dist/js/bootstrap.bundle.min.js": ["./node_modules/types/bootstrap"]
+    },
+    "target": "ESNext",
+    "lib": ["DOM", "ESNext"],
+    "strict": false, //엄격한 타입스크립트 전용 = true
+    "allowJs": true //.js 파일 허용여부
+  }
+}
